@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+    <h2>Voting Results</h2>
+    <ul class="list-group">
+        {% for vote in votes %}
+            <li class="list-group-item">{{ vote.candidate.name }} - Voted by {{ vote.voter.username }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
